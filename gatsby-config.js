@@ -28,12 +28,21 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-source-filesystem', {
+    {
+      resolve: 'gatsby-source-filesystem',
+        options: {
+          path: `${__dirname}/src/posts`,
+          name: 'posts'
+        }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
       options: {
-        path: `${__dirname}/src/posts`,
-        name: 'posts'
+        footnotes: true,
+        gfm: true,
+        plugins: [],
       }
-    }
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
