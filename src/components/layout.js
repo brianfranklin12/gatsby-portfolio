@@ -29,11 +29,11 @@ const MainLayout = styled.main`
   grid-gap: 40px;
 `
 const Footer = styled.footer`
-  background: #524763;
-  padding: 2rem;
-  color: #fff;
+  background: #2D4739;
+  padding: 1rem 2rem;
+  color: #D7DEDC;
   a {
-    color: #fff;
+    color: #D7DEDC;
   }
 `
 const Layout = ({ children }) => {

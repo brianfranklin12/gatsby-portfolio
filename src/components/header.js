@@ -4,27 +4,27 @@ import { Link } from "gatsby"
 import styled from "styled-components";
 
 const HeaderWrapper = styled.div`
-  background-color: #524763;
+  background-color: #2D4739;
   margin-bottom: 1.45rem;
 `;
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  max-width: 960px;
   padding: 1rem;
+  a {
+    color: #D7DEDC;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+  }
 `
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
       <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+        <Link to="/">
+          Brian Franklin
         </Link>
       </h1>
       </HeaderContainer>

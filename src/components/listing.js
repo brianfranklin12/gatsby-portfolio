@@ -27,7 +27,7 @@ const Post = styled.article`
   border-radius: 4px;
   margin-bottom: 1rem;
   a {
-    color: #000;
+    color: #333;
     text-decoration: none;
   }
   h2 {
@@ -40,7 +40,7 @@ const Post = styled.article`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 0.8rem;
     text-decoration: underline;
-    color: #524763;
+    color: #856084;
   }
 `
 const Listing = () => {
