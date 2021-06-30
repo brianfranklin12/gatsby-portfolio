@@ -32,6 +32,9 @@ const Footer = styled.footer`
   background: #524763;
   padding: 2rem;
   color: #fff;
+  a {
+    color: #fff;
+  }
 `
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
