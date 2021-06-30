@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 import Layout from './layout'
 
 const postLayout = ({ data }) => {
+  const { markdownRemark } = data
   return (
     <Layout>
-      <h1>{data.markdownRemark.frontmatter.title}</h1>
+      <h1>{markdownRemark.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{
-        __html: data.markdownRemark.html
+        __html: markdownRemark.html
       }}/>
     </Layout>
   )
