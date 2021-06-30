@@ -12,7 +12,27 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Archive from "./archive"
 import "./layout.css"
+import styled from "styled-components";
 
+
+const Wrapper = styled.div`
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+`
+
+const MainLayout = styled.main`
+  max-width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 40px;
+`
+const Footer = styled.footer`
+  background: #524763;
+  padding: 2rem;
+  color: #fff;
+`
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -25,28 +45,20 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Wrapper>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
+      <MainLayout>
+        <div>
+          {children}
+        </div>
         <Archive />
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      </MainLayout>
+      <Footer>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </Footer>
+    </Wrapper>
   )
 }
 

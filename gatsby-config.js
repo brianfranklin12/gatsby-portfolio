@@ -41,8 +41,9 @@ module.exports = {
         footnotes: true,
         gfm: true,
         plugins: [],
-      }
+      },  
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
