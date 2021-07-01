@@ -22,7 +22,8 @@ const Wrapper = styled.div`
 `
 
 const MainLayout = styled.main`
-  max-width: 90%;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 3fr 1fr;

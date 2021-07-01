@@ -31,7 +31,7 @@ const ArchiveList = styled.ul`
   list-style: none;
   a {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: underline;
     color: #856084;
   }
