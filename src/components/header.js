@@ -10,7 +10,10 @@ const HeaderWrapper = styled.div`
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
-  padding: 1rem;
+  padding: .75rem;
+  h1 {
+    margin: 0;
+  }
   a {
     color: #D7DEDC;
     text-decoration: none;
@@ -22,7 +25,7 @@ const HeaderContainer = styled.div`
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
-      <h1 style={{ margin: 0 }}>
+      <h1>
         <Link to="/">
           Brian Franklin
         </Link>
