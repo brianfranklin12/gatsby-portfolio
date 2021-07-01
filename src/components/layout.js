@@ -27,6 +27,9 @@ const MainLayout = styled.main`
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 40px;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
 `
 const Footer = styled.footer`
   background: #2D4739;
