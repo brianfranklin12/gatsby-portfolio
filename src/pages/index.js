@@ -1,12 +1,22 @@
-import * as React from "react"
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import Layout from "../components/layout"
-import Listing from "../components/listing"
+import Banner from "../components/Banner";
+import Navigation from "../components/Navigation";
 
 const IndexPage = () => (
-  <Layout>
-    <Listing />
-  </Layout>
+  <>
+  <Helmet
+    htmlAttributes={{
+      lang: "en"
+    }}
+  >
+    <meta charSet="utf-8" />
+    <title>Brian Franklin</title>
+  </Helmet>
+  <Banner />
+  <Navigation />
+  </>
 )
 
 export default IndexPage
