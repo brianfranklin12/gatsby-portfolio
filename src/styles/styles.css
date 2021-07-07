@@ -2,8 +2,15 @@
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #___gatsby {
   height: 100%;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
+}
+
+html, body {
   min-height: 100%;
   font-size: 62.5%;
   margin: 0;
