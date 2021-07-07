@@ -1,14 +1,28 @@
+:root {
+  /* Colors */
+  --black: #1b1719;
+  --grey: #393d3a;
+  --green: #3f5843;
+  --tan: #b69b7d;
+  --cloud: #d4d6d5;
+
+  /* Color Scheme */
+  --bg-color: var(--cloud);
+  --text-color: var(--black);
+  --primary-color: var(--green);
+  --secondary-color: var(--tan);
+}
+
+
+
 * {
   box-sizing: border-box;
 }
 
-html, body, #___gatsby {
+html, body, #___gatsby, #gatsby-focus-wrapper {
   height: 100%;
 }
 
-div[role="group"][tabindex] {
-  height: 100%;
-}
 
 html, body {
   min-height: 100%;

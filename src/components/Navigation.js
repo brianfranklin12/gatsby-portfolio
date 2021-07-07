@@ -5,10 +5,11 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   padding: 2rem 0;
-  background-color: #333;
-  color: #fff;
+  background-color: var(--grey);
+  color: var(--bg-color);
   text-transform: uppercase;
   font-size: 1.5rem;
+  letter-spacing: 0.1em;
   div {
     margin: 0 2rem;
   }
