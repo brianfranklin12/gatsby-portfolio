@@ -22,8 +22,7 @@ const List = styled.div`
     cursor: pointer;
     img {
       width: 50px;
-      fill: var(--grey);
-      color: var(--grey);
+
     }
   }  
 `
@@ -35,7 +34,7 @@ export default function About() {
       <h3>Technologies I Use</h3>
       <List>
         {technologies.map (t => {
-          return <li><img src={t} /></li>
+          return <li key={t}><img alt="icon" src={t} /></li>
         })}
       </List>
     </Container>
