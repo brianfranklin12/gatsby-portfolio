@@ -12,6 +12,9 @@ const Nav = styled.nav`
   div {
     margin: 0 2rem;
   }
+  @media (min-width: 500px) {
+    font-size: 2rem;
+  }
 `
 
 export default function Navigation() {
