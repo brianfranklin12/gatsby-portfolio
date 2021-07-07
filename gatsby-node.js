@@ -2,7 +2,7 @@ const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const postLayout = path.resolve('./src/components/postLayout.js')
+  const postLayout = path.resolve('./src/components/blog/postLayout.js')
   const result = await graphql(`
   query {
     allMarkdownRemark {
