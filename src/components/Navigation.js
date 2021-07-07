@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   padding: 2rem 0;
   background-color: #333;
   color: #fff;
   text-transform: uppercase;
+  font-size: 1.5rem;
   div {
     margin: 0 2rem;
   }
