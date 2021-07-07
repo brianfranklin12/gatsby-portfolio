@@ -20,6 +20,10 @@ const Container = styled.div`
     font-weight: 300;
     letter-spacing: 0.1em;
     margin: 1em 0;
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+    text-decoration-thickness: .1em;
+    text-underline-offset: .2em;
   }
 `
 

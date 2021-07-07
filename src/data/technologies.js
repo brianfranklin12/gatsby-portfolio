@@ -1,0 +1,1 @@
+export const technologies = ["HTML", "CSS", "JavaScript", "React", "Redux", "Ruby", "Rails", "Gatsby", "NodeJS", "MongoDB", "GraphQL"]
