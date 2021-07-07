@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  height: 100%;
+  flex-direction: column;
+  height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -12,7 +13,8 @@ const Container = styled.div`
 export default function Banner() {
   return (
     <Container>
-      <h1>Banner</h1>
+      <h1>Brian Franklin</h1>
+      <h2>Full Stack Web Developer</h2>
     </Container>
   )
 }

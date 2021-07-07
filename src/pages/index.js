@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 
+import "../styles/styles.css"
+
 const IndexPage = () => (
   <>
   <Helmet
