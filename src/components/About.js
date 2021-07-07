@@ -14,11 +14,17 @@ const Container = styled.div`
 const List = styled.div`
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   li {
     padding: 0 1rem;
     cursor: pointer;
+    img {
+      width: 50px;
+      fill: var(--grey);
+      color: var(--grey);
+    }
   }  
 `
 export default function About() {
@@ -29,7 +35,7 @@ export default function About() {
       <h3>Technologies I Use</h3>
       <List>
         {technologies.map (t => {
-          return <li>{t}</li>
+          return <li><img src={t} /></li>
         })}
       </List>
     </Container>
