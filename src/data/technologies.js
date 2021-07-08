@@ -11,3 +11,7 @@ import GraphQL from '../images/GraphQL.svg';
 import MongoDB from '../images/MongoDB.svg';
 
 export const technologies = [HTML, CSS, JavaScript, React, Redux, Rails, Ruby, Gatsby, NodeJS, GraphQL, MongoDB];
+
+export const spotify = [React, Redux, Rails];
+
+export const coffeeLogger = [JavaScript, CSS, Rails];

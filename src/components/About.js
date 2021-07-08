@@ -9,7 +9,7 @@ const Container = styled.div`
   margin: 2rem auto;
   text-align: center;
   font-size: 2rem;
-  line-height: 1.4em;
+  line-height: 1.4em; 
 `
 
 const Content = styled.div`
