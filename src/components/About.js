@@ -9,7 +9,11 @@ const Container = styled.div`
   margin: 2rem auto;
   text-align: center;
   font-size: 2rem;
-  line-height: 1.4em; 
+  line-height: 1.4em;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
 `
 
 const Content = styled.div`
@@ -58,9 +62,9 @@ export default function About() {
       <h3>Hi, I'm Brian</h3>
       <Content>
       <img alt="avatar" src={Avatar} />
-      <p>I'm baby vice four loko try-hard meh +1 before they sold out street art bicycle rights gastropub keffiyeh banh mi drinking vinegar jean shorts. Fam poutine cornhole, sustainable gochujang pok pok raclette. Pinterest bicycle rights tumblr raclette, tousled photo booth shabby chic meditation street art hoodie farm-to-table pitchfork. Tilde chartreuse cloud bread everyday carry kickstarter paleo keffiyeh hoodie typewriter kogi before they sold out.</p>
+      <p>Full stack web developer with experience in Ruby on Rails and JavaScript. Background in the music and the specialty coffee industries.  Robust management experience including team leadership roles. When not coding, you can find me brewing a cup of single origin coffee, cooking, or writing music.</p>
       </Content>
-      <h3>Technologies I Use</h3>
+      <h4>Technologies I Use</h4>
       <List>
         {technologies.map (t => {
           return <li key={t}><img alt="icon" src={t} /></li>
