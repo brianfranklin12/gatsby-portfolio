@@ -12,11 +12,15 @@ const Section = styled.section`
 
 const Container = styled.div`
   width: 80%;
-  max-width: 1000px;
+  // max-width: 1000px;
   margin: 2rem auto;
   text-align: center;
   font-size: 2rem;
   line-height: 1.4em;
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
 `
 
 export default function Projects() {

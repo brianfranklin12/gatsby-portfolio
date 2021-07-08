@@ -1,53 +1,85 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import github from '../images/social/github.svg'
 
-const Card = styled.div`
+// import ReactCardFlip from 'react-card-flip';
+
+const ProjectDetails = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 2rem;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
-  margin: 1rem;
-  a {
-    text-decoration-color: var(--primary-color);
-    color: inherit;
-  }
-  img {
+  @media (max-width: 500px) {
     display: block;
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
   }
 `
 
-const Projects = styled.div`
-  display: flex;
-  justify-content: center; 
-  align-items: center;
+const Screen = styled.div`
+  width: 85%;
+  margin: 2rem auto;
   img {
-    margin: 0 auto;
-    height: 60px;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.4);
+  }
+`
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  h4 {
+    margin: 0;
+  }
+  p {
+    margin: 1rem;
+  }
+  h6 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  img {
+    padding: .3rem;
+    border-radius: 50%;
+  }
+`
+
+const TechStack = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  img {
     width: 60px;
-    padding: 0.6rem;
-    background-color: var(--bg-color);
+    height: 60px;
+    padding: .6rem;
+    // background-color: var(--bg-color);
+    border-radius: 0;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
   }
 `
 
 export default function Project ({ project }) {
+
+  const [flip, setFlip] = useState(false);
+
   return (
-    <Card>
-      <img src={project.img} />
-      <div>
-        <h3>{project.title}</h3>
-        <p>{project.desc}</p>
-        <a href={project.github}>Link to Repository</a>
-        <h5>Tech Stack: </h5>
-        <Projects>
-          {project.techStack && project.techStack.map(tech => {
-            return <img alt={tech} src={tech} />
-          })}
-        </Projects>
-      </div>
-    </Card>
+      <ProjectDetails>
+        <Screen>
+          <img 
+            alt={project.title} 
+            src={project.img} 
+            onMouseEnter={() => setFlip(true)}
+            onMouseLeave={() => setFlip(false)}
+          />
+        </Screen>
+        <Details>
+          <h4>{project.title}</h4>
+          {/* <a href={project.github}><img src={github} alt="github link"/></a> */}
+          <p>{project.desc}</p>
+          <h6>Tech Stack Used: </h6>
+          <TechStack>
+            {project.techStack.map(tech => <img alt={tech} src={tech} />)}
+          </TechStack>
+        </Details>
+      </ProjectDetails>
   )
 }
