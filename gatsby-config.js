@@ -5,6 +5,7 @@ module.exports = {
     author: `Brian Franklin`,
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {

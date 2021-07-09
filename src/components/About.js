@@ -58,7 +58,7 @@ const List = styled.div`
 `
 export default function About() {
   return (
-    <Container>
+    <Container id="about">
       <h3>Hi, I'm Brian</h3>
       <Content>
       <img alt="avatar" src={Avatar} />

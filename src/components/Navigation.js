@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 const Nav = styled.nav`
   display: flex;
@@ -7,11 +9,20 @@ const Nav = styled.nav`
   padding: 2rem 0;
   background-color: var(--grey);
   color: var(--bg-color);
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  letter-spacing: 0.1em;
-  div {
-    margin: 0 2rem;
+  
+  button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: all 200ms;
+  }
+  button:hover {
+    color: #fff;
   }
   @media (min-width: 500px) {
     font-size: 2rem;
@@ -20,10 +31,10 @@ const Nav = styled.nav`
 
 export default function Navigation() {
   return (
-    <Nav>
-      <div>About</div>
-      <div>Projects</div>
-      <div>Contact</div>
+    <Nav id="nav">
+      <button onClick={() => scrollTo('#about')}>About</button>
+      <button onClick={() => scrollTo('#projects')}>Projects</button>
+      <button onClick={() => scrollTo('#contact')}>Contact</button>
     </Nav>
   )
 }

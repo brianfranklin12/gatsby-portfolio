@@ -56,7 +56,7 @@ const Footer = styled.footer`
 `
 export default function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <Content>
       <h3>Want to get in touch?</h3>
       <p>Check out my <a rel="noreferrer" target="_blank" href={resume}>resume</a>, my <a href="/blog">blog</a> or shoot me an <a href="mailto: brian@brianfranklin.dev">email</a>.</p>

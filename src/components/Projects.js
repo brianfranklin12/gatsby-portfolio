@@ -25,7 +25,7 @@ const Container = styled.div`
 
 export default function Projects() {
   return (
-    <Section>
+    <Section id="projects">
       <Container>
         <h3>Projects</h3>
         {projects.map (project => {

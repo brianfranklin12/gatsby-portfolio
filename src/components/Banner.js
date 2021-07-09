@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { socials } from '../data/socials';
 import arrowDown from '../images/arrow-down.svg';
 import resume from '../resume.pdf';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+
 
 const Container = styled.div`
   display: grid;
@@ -62,13 +64,20 @@ const Resume = styled.a`
 
 const DownArrow = styled.div`
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 200ms;
   h4 {
     margin-bottom: 1rem;
+    text-transform: uppercase;
   }
   img {
     width: 35px;
     margin-bottom: 1.5rem;
+  }
+  :hover {
+    letter-spacing: 0.1em;
+    transform: translateY(5px);
   }
 `
 export default function Banner() {
@@ -86,7 +95,7 @@ export default function Banner() {
       <h1>Brian Franklin</h1>
       <h2>Full Stack Web Developer</h2>
       </Content>
-      <DownArrow>
+      <DownArrow onClick={() => scrollTo('#nav')}>
         <h4>Learn More</h4>
         <img alt="down arrow" src={arrowDown} />
       </DownArrow>
