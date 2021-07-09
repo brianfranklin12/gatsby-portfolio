@@ -26,6 +26,9 @@ const Nav = styled.nav`
   }
   @media (min-width: 500px) {
     font-size: 2rem;
+    button {
+      padding: 0 2rem;
+    }
   }
 `
 
