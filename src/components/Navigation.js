@@ -17,7 +17,7 @@ const Nav = styled.nav`
     text-transform: uppercase;
     font-size: 1.5rem;
     letter-spacing: 0.1em;
-    padding: 0 4rem;
+    padding: 0 2rem;
     cursor: pointer;
     transition: all 200ms;
   }
@@ -27,7 +27,7 @@ const Nav = styled.nav`
   @media (min-width: 500px) {
     font-size: 2rem;
     button {
-      padding: 0 2rem;
+      padding: 0 4rem;
     }
   }
 `
