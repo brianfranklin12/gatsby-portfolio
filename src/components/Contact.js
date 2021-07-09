@@ -44,6 +44,15 @@ const Footer = styled.footer`
   color: var(--bg-color);
   padding: 2rem;
   font-size: 1rem;
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--secondary-color);
+    transition: all 200ms;
+  }
+  a:hover {
+    border-bottom: 2px solid var(--secondary-color);
+  }
 `
 export default function Contact() {
   return (
