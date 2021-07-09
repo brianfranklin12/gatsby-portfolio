@@ -59,7 +59,7 @@ export default function Contact() {
     <Container id="contact">
       <Content>
       <h3>Want to get in touch?</h3>
-      <p>Check out my <a rel="noreferrer" target="_blank" href={resume}>resume</a>, my <a href="/blog">blog</a> or shoot me an <a href="mailto: brian@brianfranklin.dev">email</a>.</p>
+      <p>Check out my <a rel="noreferrer" target="_blank" href={resume}>resume</a>, my <a href="https://brianfranklinnc.medium.com/" target="_blank" rel="noreferrer">blog</a> or shoot me an <a href="mailto: brian@brianfranklin.dev">email</a>.</p>
       </Content>
       <Footer>
         &copy; 2021 Brian Franklin. Built with GatsbyJS <a href="https://github.com/brianfranklin12/gatsby-portfolio" target="_blank" rel="noreferrer">View the repo.</a>
