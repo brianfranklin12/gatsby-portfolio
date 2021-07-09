@@ -75,7 +75,7 @@ export default function Banner() {
       <Links>
         <Socials>
           {socials.map(s => {
-            return <li key={s}><img alt={s} width="30px" src={s} /></li>
+            return <a href={s.url}><li key={s}><img alt={s.name} width="30px" src={s.img} /></li></a>
           })}
         </Socials>
         <Resume>Resume</Resume>
