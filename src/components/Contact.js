@@ -31,6 +31,10 @@ p {
     text-decoration-thickness: .1em;
     text-underline-offset: .2em;
     cursor: pointer;
+    transition: all 200ms;
+  }
+  a:hover {
+    font-weight: 400;   
   }
 }
 `
@@ -49,7 +53,7 @@ export default function Contact() {
       <p>Check out my <a rel="noreferrer" target="_blank" href={resume}>resume</a>, my <a href="/blog">blog</a> or shoot me an <a href="mailto: brian@brianfranklin.dev">email</a>.</p>
       </Content>
       <Footer>
-        &copy; 2021 Brian Franklin. Built with GatsbyJS
+        &copy; 2021 Brian Franklin. Built with GatsbyJS <a href="https://github.com/brianfranklin12/gatsby-portfolio" target="_blank" rel="noreferrer">View the repo.</a>
       </Footer>
     </Container>
   )
