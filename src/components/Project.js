@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import github from '../images/social/github.svg'
-
-// import ReactCardFlip from 'react-card-flip';
 
 const ProjectDetails = styled.div`
   display: grid;
@@ -59,16 +56,12 @@ const TechStack = styled.div`
 
 export default function Project ({ project }) {
 
-  const [flip, setFlip] = useState(false);
-
   return (
       <ProjectDetails>
         <Screen>
           <img 
             alt={project.title} 
             src={project.img} 
-            onMouseEnter={() => setFlip(true)}
-            onMouseLeave={() => setFlip(false)}
           />
         </Screen>
         <Details>
@@ -77,7 +70,7 @@ export default function Project ({ project }) {
           <p>{project.desc}</p>
           <h6>Tech Stack Used: </h6>
           <TechStack>
-            {project.techStack.map(tech => <img alt={tech} src={tech} />)}
+            {project.techStack.map(tech => <img key={tech} alt={tech} src={tech} />)}
           </TechStack>
         </Details>
       </ProjectDetails>

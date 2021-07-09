@@ -29,7 +29,7 @@ export default function Projects() {
       <Container>
         <h3>Projects</h3>
         {projects.map (project => {
-          return <Project project={project} />
+          return <Project key={project} project={project} />
         })}
       </Container>
     </Section>
