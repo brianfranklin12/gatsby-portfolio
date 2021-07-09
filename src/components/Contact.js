@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import resume from '../resume.pdf';
 
 const Container = styled.div`
   display: grid;
@@ -24,6 +25,7 @@ p {
   margin: 1em 0;
   text-align: center;
   a {
+    color: inherit;
     text-decoration: underline;
     text-decoration-color: var(--primary-color);
     text-decoration-thickness: .1em;
@@ -44,7 +46,7 @@ export default function Contact() {
     <Container>
       <Content>
       <h3>Want to get in touch?</h3>
-      <p>Check out my <a>resume</a>, my <a>blog</a> or shoot me an <a>email.</a></p>
+      <p>Check out my <a rel="noreferrer" target="_blank" href={resume}>resume</a>, my <a href="/blog">blog</a> or shoot me an <a href="mailto: brian@brianfranklin.dev">email</a>.</p>
       </Content>
       <Footer>
         &copy; 2021 Brian Franklin. Built with GatsbyJS

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { socials } from '../data/socials';
 import arrowDown from '../images/arrow-down.svg';
+import resume from '../resume.pdf';
 
 const Container = styled.div`
   display: grid;
@@ -50,7 +51,8 @@ const Socials = styled.div`
   }
 `
 
-const Resume = styled.li`
+const Resume = styled.a`
+  text-decoration: none;
   font-size: 2rem;
   padding: 1.5rem;
   text-transform: uppercase;
@@ -75,10 +77,10 @@ export default function Banner() {
       <Links>
         <Socials>
           {socials.map(s => {
-            return <a href={s.url}><li key={s}><img alt={s.name} width="30px" src={s.img} /></li></a>
+            return <a key={s} href={s.url}><li><img alt={s.name} width="30px" src={s.img} /></li></a>
           })}
         </Socials>
-        <Resume>Resume</Resume>
+        <Resume href={resume}>Resume</Resume>
       </Links>
       <Content>
       <h1>Brian Franklin</h1>
