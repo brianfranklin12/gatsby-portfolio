@@ -51,6 +51,9 @@ const TechStack = styled.div`
     // background-color: var(--bg-color);
     border-radius: 0;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+    @media (max-width: 500px) {
+      margin: 2rem 0;
+    }
   }
 `
 
