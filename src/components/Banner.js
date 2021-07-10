@@ -49,7 +49,10 @@ const Socials = styled.div`
   display: flex;
   li {
     font-size: 1.5rem;
-    padding: 1.5em;
+    margin: 1.5em;
+  }
+  li:hover {
+    opacity: 0.8;
   }
 `
 
@@ -60,6 +63,10 @@ const Resume = styled.a`
   text-transform: uppercase;
   letter-spacing: .1em;
   color: var(--secondary-color);
+  transition: all 200ms;
+  :hover {
+    letter-spacing: .2em;
+  }
 `
 
 const DownArrow = styled.div`
