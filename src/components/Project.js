@@ -11,6 +11,7 @@ const ProjectDetails = styled.div`
 `
 
 const Screen = styled.div`
+  position: relative; 
   width: 85%;
   margin: 2rem auto;
   img {
@@ -57,19 +58,43 @@ const TechStack = styled.div`
   }
 `
 
+const TextBlock = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;  
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  :hover {
+    opacity: 0.8;
+  }
+`;
+
 export default function Project ({ project }) {
 
   return (
       <ProjectDetails>
         <Screen>
-          <img 
-            alt={project.title} 
-            src={project.img} 
-          />
+          <a href={project.github}>
+            <img 
+              alt={project.title} 
+              src={project.img} 
+            />
+            <TextBlock>
+              <h4>View Repo</h4>
+            </TextBlock>
+          </a>
+
         </Screen>
         <Details>
           <h4>{project.title}</h4>
-          {/* <a href={project.github}><img src={github} alt="github link"/></a> */}
           <p>{project.desc}</p>
           <h6>Tech Stack Used: </h6>
           <TechStack>
