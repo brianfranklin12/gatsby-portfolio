@@ -71,9 +71,10 @@ const TextBlock = styled.div`
   color: #fff;
   opacity: 0;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  transition: all 400ms;
   :hover {
     opacity: 0.8;
+    letter-spacing: 0.2em;
   }
 `;
 
